@@ -5,6 +5,8 @@
     --title-text-color: #212121;
     --accent-color: #2196F3;
     --primary-background-color: #FFFFFF;
+    --animation-time: 250ms;
+    --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -27,8 +29,8 @@ html {
 	text-decoration: none;
 	color: inherit;
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--animation-time);
+    transition-timing-function: var(--animation-timing-function);
 }
 
 .link:hover,
@@ -278,7 +280,7 @@ body {
     border: 0 solid transparent;
     border-radius: 4px;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--animation-time) var(--animation-timing-function);
 }
 
 .hero-btn:hover, 
@@ -429,7 +431,7 @@ body {
     border: none;
     border-radius: 50%;
     
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--animation-time) var(--animation-timing-function), background-color var(--animation-time) var(--animation-timing-function);
 }
 
 .socialmedia-link:hover,
@@ -477,7 +479,7 @@ body {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--animation-time) var(--animation-timing-function), border var(--animation-time) var(--animation-timing-function);
 }
 
 .clients-svg {
@@ -521,7 +523,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--animation-time) var(--animation-timing-function), background-color var(--animation-time) var(--animation-timing-function), box-shadow var(--animation-time) var(--animation-timing-function);
 }
 
 .filter-btn.everyone {
@@ -543,7 +545,7 @@ body {
 
 .portfolio-list .item {
     flex-basis: calc((100% - 2 * 30px) / 3);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--animation-time) var(--animation-timing-function);
 }
 
 .portfolio-thumb {
@@ -569,7 +571,7 @@ body {
     background-color: rgba(33, 150, 243, 0.9);
 
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--animation-time) var(--animation-timing-function);
 }
 
 .portfolio-list .item:hover .portfolio-overlay {
@@ -670,8 +672,8 @@ body {
     color: var(--primary-background-color);
     background-color: rgba(255, 255, 255, 0.1);
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--animation-time);
+    transition-timing-function: var(--animation-timing-function);
 }
 
 .socialmedia-link.group:hover,
@@ -689,7 +691,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--animation-time) var(--animation-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -715,7 +717,7 @@ body {
     border-radius: 4px;
     opacity: 1;
 
-    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--animation-time) var(--animation-timing-function), opacity var(--animation-time) var(--animation-timing-function);
 }
 
 .modal-close {
